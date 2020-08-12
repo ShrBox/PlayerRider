@@ -16,7 +16,7 @@ THook(bool, "?attack@Player@@UEAA_NAEAVActor@@@Z", Player* pl, Actor* ac)
 			return false;
 		}
 		ac2.value()->addRider(*pl);
-		pl2.value().sendText("§c[PlayerRider] 因为BUG，你需要让被骑的玩家断开服务器才能真正地取消乘骑状态");
+		pl2.value().sendText(u8"因为BUG，你需要骑上马并让被骑的玩家断开服务器才能真正地取消乘骑状态");
 		return false;
 	}
 	return original(pl, ac);
